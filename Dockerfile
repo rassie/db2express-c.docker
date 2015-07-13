@@ -27,18 +27,13 @@ FROM    centos:7
 
 MAINTAINER Leo Wu <leow@ca.ibm.com>
 
-User root
-
 ###############################################################
 #
 #               System preparation for DB2
 #
 ###############################################################
 
-RUN  yum -y install wget
-
-RUN  wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
-RUN  rpm -ivh epel-release-7-5.noarch.rpm
+RUN  yum -y install http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 
 # Required pacakges
 RUN yum install -y vi tar initscripts \
